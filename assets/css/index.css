@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'cartoon';
+  src: url('../font/times_new_romance/Times-New-Romance.ttf') format('truetype');
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.grad {
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+}
+
+body.page-transition-enter {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #e75480; /* Barbie pink */
+}
+
+.card-text {
+  color: #6a0dad; /* Purple */
+}
+
+.btn-pink {
+  background-color: #ff69b4;
+  border-color: #ff69b4;
+  transition: transform 0.2s ease;
+}
+
+.btn-pink:hover {
+  background-color: #ff1493;
+  border-color: #ff1493;
+  transform: scale(1.1);
+}
+
+@keyframes exit {
+  0% {
+    body {
+      opacity: 1;
+    }
+  }
+  100% {
+    body {
+      opacity: 0;
+    }
+  }
+}
+
+.keluar {
+  animation: exit 2s ease-out forwards;
+}
+
+.page-transition-enter {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+}
+
+.page-transition-enter-done {
+  opacity: 1;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+}
